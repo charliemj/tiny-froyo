@@ -28,6 +28,24 @@ Collaborators: none.
 
 
 
+
+
+
+
+
+
+
+
+
+
+  $('.allergen').on('click', function() {
+    var replacement_name = $("#firstReplacement").val();
+    var allergen_name = $("#header").val();;
+    var allergen = $('#'+allergen_name);
+    $(allergen).html(replacement_name);
+  });
+
+
 </script>
 
 
