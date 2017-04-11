@@ -2,8 +2,17 @@
 	background-color: red;
 }
 
-#heading{
+#header{
+    font-size:3em;
+}
 
-	
+.replacement{
+    background-color:white;
+    margin-top:20px;
+    color:blue;
+    text-decoration: underline;
+}
 
+li{
+    list-style:disc;
 }
