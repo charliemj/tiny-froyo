@@ -13,6 +13,6 @@
     text-decoration: underline;
 }
 
-li{
+li.replacement{
     list-style:disc;
 }
