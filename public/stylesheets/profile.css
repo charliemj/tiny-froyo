@@ -1,0 +1,14 @@
+html, body{
+    margin:20px;
+}
+#myAllergies{
+    background-color: white;
+    
+}
+
+.deleteButton, .allergyName{
+    margin:10px;
+    
+    display:inline-block;
+}
+
