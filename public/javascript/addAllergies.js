@@ -9,7 +9,7 @@
 
 
 $(document).ready(function(){
-    var allergiesList = ["eggs","milk"];
+    var allergiesList = [];
     
     //TODO: need to make sure can't add duplicates
     
