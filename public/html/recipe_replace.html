@@ -25,14 +25,53 @@ Collaborators: none.
 
 
 <script>
-  $('.allergen').on('click', function() {
-    var replacement_name = $("#firstReplacement").val();
-    var allergen_name = $("#header").val();;
-    var allergen = $('#'+allergen_name);
-    $(allergen).html(replacement_name);
-    $(allergen).css('background-color', "lightgreen");
-  });
 
+	
+	//when user clicks on tofu 
+	  $(document).ready(function(){
+		$(".tofu").click(function(){
+			$('#default').html('');
+			//check if list exists
+			if($('#replacementList')){
+				$('#replacementList').remove();
+			}
+			var list = '<div id="replacementList"><div class="replacement" >azuki beans</div><div class="replacement" >chickpea and rice paste</div></div>';
+			$('#firstColumn').append(list);
+			$('#header').html('Tofu');
+			$('#firstReplacement').html('azuki buttons');
+			$('#secondReplacement').html('chickpeas and rice paste');
+			
+			addListener(this);
+		
+			
+		});
+		
+		$(".soy_sauce").click(function(){
+			$('#default').html('');
+			//check if list exists
+			if($('#replacementList')){
+				$('#replacementList').remove();
+			}
+			var list = '<div id="replacementList"><div class="replacement">coconut aminos</div><div class="replacement">canola oil</div></div>';
+			$('#firstColumn').append(list);		
+			$('#header').html('Soy sauce');
+			$('#firstReplacement').html('Coconut aminos');
+			$('#secondReplacement').html('Canola oil');
+
+			addListener(this);
+			
+			
+		});
+	   });
+	   
+	function addListener(allergen){
+	  $('.replacement').on('click', function() {
+			var replacementName = this.innerHTML;
+			var allergenClass = $('.'+allergen.className.split(" ")[1]);
+			allergenClass.html(replacementName);
+			allergenClass.css('background-color', "lightgreen");
+	  });
+	}
 
 </script>
 
@@ -91,47 +130,6 @@ Collaborators: none.
 	  
 
 	</div>
- </div>
- </div>
- <script>
-	  //when user clicks on tofu 
-	  $(document).ready(function(){
-		$(".tofu").click(function(){
-			$('#default').html('');
-			//check if list exists
-			if($('#replacementList')){
-				$('#replacementList').remove();
-			}
-			var list = '<ol id="replacementList"><li id="firstReplacement"></li><li id="secondReplacement"></li></ol>';
-			$('#firstColumn').append(list);
-			$('#header').html('Tofu');
-			$('#firstReplacement').html('azuki buttons');
-			$('#secondReplacement').html('chickpeas and rice paste');
-			
-		
-			
-		});
-		
-		$(".soy_sauce").click(function(){
-			$('#default').html('');
-			//check if list exists
-			if($('#replacementList')){
-				$('#replacementList').remove();
-			}
-			var list = '<ol id="replacementList"><li id="firstReplacement"></li><li id="secondReplacement"></li></ol>';
-			$('#firstColumn').append(list);		
-			$('#header').html('Soy sauce');
-			$('#firstReplacement').html('Coconut aminos');
-			$('#secondReplacement').html('Canola oil');
-			
-		
-			
-		});
-	   });
-  
-  </script>
-
-
 
 
     <div class='col-md-8  text-left' id='mainColumn'>
