@@ -2,8 +2,7 @@ html, body{
     margin:20px;
 }
 #myAllergies{
-    background-color: white;
-    
+    background-color:#bdbdbd;    
 }
 
 .deleteButton, .allergyName{
@@ -12,6 +11,9 @@ html, body{
     display:inline-block;
 }
 
+#allergyDashboard{
+    
+}
 
 #submitButton{
     display: none; /*so that submit button is hiddden-- can submit by pressing enter*/
