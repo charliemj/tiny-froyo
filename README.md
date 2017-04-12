@@ -1,1 +1,1 @@
-Hello! 
+Hello! This is the first computer-based prototype of group Tiny Froyo (consisting of Jane Im, Karleigh Moore, Megan Prakash, and Yuwei Zhang) for MIT's User Interface Design and Implementation (6.813) class during Spring 2017. 
