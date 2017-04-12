@@ -6,7 +6,9 @@
 //  - have a text input and add button
 //  - adding will update the model and we go through the model and append with jquery a new allergy object
 
-
+//TODO
+//make dropdown with common allergies
+//enable pressing enter instead of submit button (or maybe have both?)
 
 $(document).ready(function(){
     var allergiesList = [];
@@ -28,12 +30,15 @@ $(document).ready(function(){
         updateAllergies();
     });
 
-    $('body').on("click", "#submitButton", function(){
-        var newAllergy = $("#newAllergy").val();
-        $("#newAllergy").val("");
-        //add new allergy
-        allergiesList.push(newAllergy);
-        updateAllergies();
+    //http://stackoverflow.com/questions/16011312/execute-function-on-enter-key
+    $('body').on("keydown", function(e){
+        if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+            var newAllergy = $("#newAllergy").val();
+            $("#newAllergy").val("");
+            //add new allergy
+            allergiesList.push(newAllergy);
+            updateAllergies();
+        }
     });
 
 
