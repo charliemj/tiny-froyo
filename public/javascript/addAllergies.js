@@ -30,6 +30,19 @@ $(document).ready(function(){
         updateAllergies();
     });
 
+   
+    
+    $("body").on("click", "#common",function(){
+         var checked = $("#addCommon").children().children("input:checked").map(function() {
+            return this.id;
+        }).get();
+        console.log(checked);
+        for(allergy of checked){
+            allergiesList.push(allergy);
+        }
+        updateAllergies();
+    });
+
     //http://stackoverflow.com/questions/16011312/execute-function-on-enter-key
     $('body').on("keydown", function(e){
         if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
@@ -41,5 +54,6 @@ $(document).ready(function(){
         }
     });
 
+    
 
 });//keep at bottom of the file

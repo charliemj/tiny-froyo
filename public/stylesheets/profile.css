@@ -12,3 +12,7 @@ html, body{
     display:inline-block;
 }
 
+
+#submitButton{
+    display: none; /*so that submit button is hiddden-- can submit by pressing enter*/
+}

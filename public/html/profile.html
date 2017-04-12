@@ -47,18 +47,48 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+  
+  <div class='container'>
+    <div class='col-md-4 text-left' id='firstColumn'>
+  </div>
 
-  <h1>My Allergies</h1>
-    <div id="allergyDashboard">
-    <div id="myAllergies">
-      <!--Allergies displayed here-->
+  <div class='col-md-4  text-left' id='mainColumn'>
+    <h1>My Allergies</h1>
+      <div id="allergyDashboard">
+      <div id="myAllergies">
+        <!--Allergies displayed here-->
+      </div>
+        <form>
+          Allergy:<br>
+          <input id="newAllergy" type="text" name="allergy" placeholder="My allergy">
+          <input id="submitButton" type="text" value="Submit">
+        </form>
+      </div>
+
+      
+      <select name="select">
+        <option value="" disabled selected >Common Allergies</option> 
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
     </div>
     
-      <form>
-        Allergy:<br>
-        <input id="newAllergy" type="text" name="allergy" placeholder="My allergy">
-        <input id="submitButton" type="text" value="Submit" style="display: none">
+    <div class='col-md-4  text-left' id='thirdColumn'>
+      <form id="addCommon">
+        <legend>Add Common Allergies</legend>
+        <div>
+          <input type="checkbox" id="soy"  value="soy">
+          <label for="soy">Soy</label>
+        </div>
+        <div>
+          <input type="checkbox" id="nuts" value="nuts">
+          <label for="nuts">Nuts</label>
+        </div>
+        <div>
+           <button type="button" id="common">Add Allergies</button>
+        </div>
       </form>
     </div>
+
 </body>
 </html>
