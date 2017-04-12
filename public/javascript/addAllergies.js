@@ -35,11 +35,14 @@ $(document).ready(function(){
     $("body").on("click", "#common",function(){
          var checked = $("#addCommon").children().children("input:checked").map(function() {
             return this.id;
-        }).get();
-        console.log(checked);
+        }).get(); //gets all the values of the checked boxes
+        
         for(allergy of checked){
             allergiesList.push(allergy);
         }
+
+        $("#addCommon").children().children("input:checked").prop("checked", false); //unchecks all boxes
+
         updateAllergies();
     });
 
