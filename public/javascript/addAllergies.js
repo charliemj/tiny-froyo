@@ -6,9 +6,6 @@
 //  - have a text input and add button
 //  - adding will update the model and we go through the model and append with jquery a new allergy object
 
-//TODO
-//make dropdown with common allergies
-//enable pressing enter instead of submit button (or maybe have both?)
 
 $(document).ready(function(){
     var allergiesList = [];
@@ -38,7 +35,9 @@ $(document).ready(function(){
         }).get(); //gets all the values of the checked boxes
         
         for(allergy of checked){
-            allergiesList.push(allergy);
+            if (!allergiesList.includes(allergy)){ //don't add repeats
+                allergiesList.push(allergy); 
+            }
         }
 
         $("#addCommon").children().children("input:checked").prop("checked", false); //unchecks all boxes
@@ -51,9 +50,11 @@ $(document).ready(function(){
         if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
             var newAllergy = $("#newAllergy").val();
             $("#newAllergy").val("");
-            //add new allergy
-            allergiesList.push(newAllergy);
-            updateAllergies();
+            if (!allergiesList.includes(newAllergy)){ //don't add repeats
+                //add new allergy
+                allergiesList.push(newAllergy);
+                updateAllergies();
+            }
         }
     });
 
