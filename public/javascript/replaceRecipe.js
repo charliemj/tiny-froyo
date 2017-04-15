@@ -50,3 +50,12 @@
 			allergenClass.css('background-color', "lightgreen");
 	  });
 	}
+	
+	function printRecipe(){
+		recipeCSS = new String ('<link href="../stylesheets/styles-master.css" rel="stylesheet">');
+		mainCSS = new String('<link href="../stylesheets/recipe_style.css" rel="stylesheet">');
+		window.frames["print_frame"].document.body.innerHTML= recipeCSS + mainCSS + document.getElementById('mainColumn').innerHTML;
+        window.frames["print_frame"].window.focus();
+        window.frames["print_frame"].window.print();
+		
+	}
