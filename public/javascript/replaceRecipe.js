@@ -11,9 +11,9 @@
 			$('#firstColumn').append(list);
 			$('#azuki1').append('<br>- a Japanese dessert, "sekihan"');
 			$('#azuki1').append('<br>- high in fiber');
-			$('#azuki1').append('<br><span>more...</span>');
+			$('#azuki1').append('<br><span id="azuki-more">more...</span>');
 			$('#chickpea1').append('<br>-greek comfort food');
-			$('#chickpea1').append('<br><span>more...</span>');
+			$('#chickpea1').append('<br><span id="chickpea-more">more...</span>');
 			$('#header').html('Tofu');
 			
 			addListener(this);
@@ -31,9 +31,9 @@
 			$('#firstColumn').append(list);	
 			$('#coconut1').append('<br>- from the nutrient rich sap of the coconut trees');
 			$('#coconut1').append('<br>- contains 17 amino acids');
-			$('#coconut1').append('<br><span>more...</span>');	
+			$('#coconut1').append('<br><span id="coconut-more">more...</span>');	
 			$('#canola1').append('<br>-low in saturate fat, high in unsaturated fat');
-			$('#canola1').append('<br><span>more...</span>');
+			$('#canola1').append('<br><span id="canola-more">more...</span>');
 			$('#header').html('Soy sauce');
 
 			addListener(this);
