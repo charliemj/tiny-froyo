@@ -16,7 +16,7 @@
 }
 
 .recipe .replacement{
-    margin-top:20px;
+    margin:10px;
     color:blue;
     text-decoration: underline;
 }
@@ -25,3 +25,38 @@
     list-style:disc;
 }
 
+.recipe #wrapper {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: inline-block;
+}
+
+.recipe #sidebar-wrapper {
+    height: 100%;
+    padding: 50px 0 0px 0;
+    position: fixed;
+    border-right: 1px solid gray;
+}
+.recipe #firstColumn {
+    position: relative;
+    height: 100%;
+    overflow:hidden;
+    padding-left: 30px;
+    padding-right:20px;
+}
+
+.recipe #main-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    padding: 50px 0 0px 0;
+}
+.recipe #mainColumn {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 15px;
+}
