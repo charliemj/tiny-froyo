@@ -1,5 +1,7 @@
 
-	//when user clicks on tofu 
+	  var chosenIntgredient;
+	
+	  //when user clicks on tofu 
 	  $(document).ready(function(){
 		$(".tofu").click(function(){
 			$('#default').html('');
@@ -14,11 +16,11 @@
 			$('#azuki1').append('<br><span id="azuki-more">more...</span>');
 			$('#chickpea1').append('<br>-greek comfort food');
 			$('#chickpea1').append('<br><span id="chickpea-more">more...</span>');
+			
 			$('#header').html('Tofu');
 			
 			addListener(this);
-		
-			
+
 		});
 		
 		$(".soy_sauce").click(function(){
@@ -35,7 +37,7 @@
 			$('#canola1').append('<br>-low in saturate fat, high in unsaturated fat');
 			$('#canola1').append('<br><span id="canola-more">more...</span>');
 			$('#header').html('Soy sauce');
-
+		
 			addListener(this);
 			
 			
@@ -48,6 +50,7 @@
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
 			allergenClass.html(replacementName);
 			allergenClass.css('background-color', "lightgreen");
+			chosenIntgredient = this;
 	  });
 	}
 	
