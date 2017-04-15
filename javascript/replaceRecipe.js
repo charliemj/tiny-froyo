@@ -49,7 +49,9 @@
 			var replacementName = this.innerHTML.split('<br>')[0];
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
 			allergenClass.html(replacementName);
-			allergenClass.css('background-color', "lightgreen");
+			allergenClass.css('background-color', "white");
+			allergenClass.css('color', "green");
+			allergenClass.css('font-weight', "bold");
 			chosenIntgredient = this;
 	  });
 	}
