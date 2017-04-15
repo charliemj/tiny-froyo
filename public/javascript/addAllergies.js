@@ -58,6 +58,15 @@ $(document).ready(function(){
         }
     });
 
+    $('body').on("click","#submitNewAllergy", function(){
+        var newAllergy = $("#newAllergy").val();
+        $("#newAllergy").val("");
+        if (!allergiesList.includes(newAllergy)){ //don't add repeats
+            //add new allergy
+            allergiesList.push(newAllergy);
+            updateAllergies();
+        }
+    });
     
 
 });//keep at bottom of the file
