@@ -1,18 +1,27 @@
-.allergen{
-	background-color: red;
+
+/** Recipe page styles ***/
+
+.recipe .left-panel {
+	background-color: #EEE;
+	height: 100%;
 }
 
-#header{
-    font-size:3em;
+.recipe .allergen{
+	background-color: #ed6363;
 }
 
-.replacement{
-    background-color:white;
+.recipe #header{
+    font-size:2em;
+    background-color:#ed6363;
+}
+
+.recipe .replacement{
     margin-top:20px;
     color:blue;
     text-decoration: underline;
 }
 
-li.replacement{
+.recipe li.replacement{
     list-style:disc;
 }
+

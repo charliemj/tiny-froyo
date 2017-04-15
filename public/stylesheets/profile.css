@@ -1,20 +1,15 @@
-html, body{
-    margin:20px;
-}
-#myAllergies{
+/** Profile page styles **/
+
+.profile #myAllergies{
     background-color:#bdbdbd;    
 }
 
-.deleteButton, .allergyName{
+.profile .deleteButton, .allergyName{
     margin:10px;
     
     display:inline-block;
 }
 
-#allergyDashboard{
+.profile #allergyDashboard{
     
-}
-
-#submitButton{
-    display: none; /*so that submit button is hiddden-- can submit by pressing enter*/
 }
