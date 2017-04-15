@@ -27,3 +27,7 @@ html, body{
 	padding-top: 20px;
 	padding-left: 40px;
 }
+
+.navbar-default {
+    border-color:#88c96c;
+}

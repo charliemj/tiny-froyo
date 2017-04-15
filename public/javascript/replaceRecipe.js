@@ -7,8 +7,13 @@
 			if($('#replacementList')){
 				$('#replacementList').remove();
 			}
-			var list = '<div id="replacementList"><li class="replacement" >azuki beans</li><li class="replacement" >chickpea and rice paste</li></div>';
+			var list = '<div id="replacementList"><li class="replacement" id="azuki1">azuki beans</li><li class="replacement" id="chickpea1">chickpea and rice paste</li></div>';
 			$('#firstColumn').append(list);
+			$('#azuki1').append('<br>- a Japanese dessert, "sekihan"');
+			$('#azuki1').append('<br>- high in fiber');
+			$('#azuki1').append('<br><span id="azuki-more">more...</span>');
+			$('#chickpea1').append('<br>-greek comfort food');
+			$('#chickpea1').append('<br><span id="chickpea-more">more...</span>');
 			$('#header').html('Tofu');
 			
 			addListener(this);
@@ -22,8 +27,13 @@
 			if($('#replacementList')){
 				$('#replacementList').remove();
 			}
-			var list = '<div id="replacementList"><li class="replacement">coconut aminos</li><li class="replacement">canola oil</li></div>';
-			$('#firstColumn').append(list);		
+			var list = '<div id="replacementList"><li class="replacement" id="coconut1">coconut aminos</li><li class="replacement" id="canola1">canola oil</li></div>';
+			$('#firstColumn').append(list);	
+			$('#coconut1').append('<br>- from the nutrient rich sap of the coconut trees');
+			$('#coconut1').append('<br>- contains 17 amino acids');
+			$('#coconut1').append('<br><span id="coconut-more">more...</span>');	
+			$('#canola1').append('<br>-low in saturate fat, high in unsaturated fat');
+			$('#canola1').append('<br><span id="canola-more">more...</span>');
 			$('#header').html('Soy sauce');
 
 			addListener(this);
@@ -34,7 +44,7 @@
 	   
 	function addListener(allergen){
 	  $('.replacement').on('click', function() {
-			var replacementName = this.innerHTML;
+			var replacementName = this.innerHTML.split('<br>')[0];
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
 			allergenClass.html(replacementName);
 			allergenClass.css('background-color', "lightgreen");
