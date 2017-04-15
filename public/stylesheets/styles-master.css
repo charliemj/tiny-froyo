@@ -51,16 +51,21 @@ html, body{
 
 /** Recipe page styles ***/
 
+.left-panel {
+	background-color: #EEE;
+	height: 100%;
+}
+
 .allergen{
 	background-color: #ed6363;
 }
 
 #header{
-    font-size:3em;
+    font-size:2em;
+    background-color:#ed6363;
 }
 
 .replacement{
-    background-color:white;
     margin-top:20px;
     color:blue;
     text-decoration: underline;
