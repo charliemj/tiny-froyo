@@ -1,10 +1,10 @@
 /******************* Color reference *****************/
 /*
 
-dominant green: ;
+dominant green: #88c96c;
 
-green text highlight:;
-red text highlight: ;
+green text highlight: #a9d895;
+red text highlight: #ed6363;
 
 */
 
@@ -12,3 +12,61 @@ red text highlight: ;
 font: source sans pro;
 (import google fonts)
 */
+
+
+html, body{
+    color:black;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/** Universal styles **/
+.navbar-default .navbar-brand {
+	font-size: 4em;
+	font-weight: bold;
+	color: #88c96c;
+	padding-top: 20px;
+	padding-left: 40px;
+}
+
+
+/** Profile page styles **/
+
+#myAllergies{
+    background-color:#bdbdbd;    
+}
+
+.deleteButton, .allergyName{
+    margin:10px;
+    
+    display:inline-block;
+}
+
+#allergyDashboard{
+    
+}
+
+#submitButton{
+    display: none; /*so that submit button is hiddden-- can submit by pressing enter*/
+}
+
+/** Recipe page styles ***/
+
+.allergen{
+	background-color: #ed6363;
+}
+
+#header{
+    font-size:3em;
+}
+
+.replacement{
+    background-color:white;
+    margin-top:20px;
+    color:blue;
+    text-decoration: underline;
+}
+
+li.replacement{
+    list-style:disc;
+}
+
