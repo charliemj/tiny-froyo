@@ -6,7 +6,7 @@ $(document).ready(function(){
         $("#myAllergies").empty();//so we don't add repeats
         
         for(allergy of allergiesList){
-            $("#myAllergies").append('<div class="allergyRow" id="'+allergy+'"Row"><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button><p class="allergyName">'+allergy+'</p></div>');
+            $("#myAllergies").append('<div class="allergyRow" id="'+allergy+'"Row"><p class="allergyName">'+allergy+'</p><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button></div>');
         }
     };
 
