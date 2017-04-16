@@ -7,8 +7,9 @@ $(document).ready(function(){
 
     // Get saved data from sessionStorage
     var data = JSON.parse(sessionStorage.getItem('allergies'));
-    allergiesList = data;
-    
+    if(data){
+        allergiesList = data;
+    }
 
     var updateAllergies = function(){
         $("#myAllergies").empty();//so we don't add repeats
@@ -19,8 +20,9 @@ $(document).ready(function(){
         sessionStorage.setItem('allergies', JSON.stringify(allergiesList));
     };
 
-    updateAllergies(); //need this to load any existing allergies
-    
+    if (data){
+        updateAllergies(); //need this to load any existing allergies
+    }
     //deletes allergy when delete button is clicked
     $("body").on("click", ".deleteButton",function(){//http://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
         //remove that allergy from the list
