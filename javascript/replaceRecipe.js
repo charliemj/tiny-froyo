@@ -53,10 +53,22 @@
 	  $('.replacement').on('click', function() {
 			var replacementName = this.innerHTML.split('<br>')[0];
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
-			allergenClass.html(replacementName);
-			allergenClass.css('background-color', "white");
-			allergenClass.css('color', "green");
-			allergenClass.css('font-weight', "bold");
+			allergenClass.html(replacementName);	
+			allergenClass.css('background-color', "lightgreen");
+    		setTimeout(complete1, 300);
+    		function complete1() {
+    			allergenClass.css('background-color', "white");
+    			setTimeout(complete2, 300);
+    		}
+    		function complete2() {
+    			allergenClass.css('background-color', "lightgreen");
+    			setTimeout(complete3, 300);
+    		}
+    		function complete3() {
+    			allergenClass.css('background-color', "white");
+				allergenClass.css('color', "green");
+				allergenClass.css('font-weight', "bold");
+    		}			
 			chosenIntgredient = this;
 	  });
 	}
