@@ -31,3 +31,7 @@ html, body{
 .navbar-default {
     border-color:#88c96c;
 }
+
+.navbar-default .navbar-brand:hover{
+	color:#9be27c;
+}
