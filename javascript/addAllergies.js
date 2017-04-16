@@ -1,20 +1,10 @@
-//Strategy
-//make a model for the allergy list
-//make a div where allergies will be displayed
-//each allegry will have an edit and delete button next to it
-//be able to add a new allergy.
-//  - have a text input and add button
-//  - adding will update the model and we go through the model and append with jquery a new allergy object
-
 
 $(document).ready(function(){
     var allergiesList = [];
-    
-    //TODO: need to make sure can't add duplicates
-    
+        
     var updateAllergies = function(){
         $("#myAllergies").empty();//so we don't add repeats
-        //go through and update the allergy list
+        
         for(allergy of allergiesList){
             $("#myAllergies").append('<div class="allergyRow" id="'+allergy+'"Row"><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button><p class="allergyName">'+allergy+'</p></div>');
         }
@@ -27,7 +17,6 @@ $(document).ready(function(){
         updateAllergies();
     });
 
-   
     
     $("body").on("click", "#common",function(){
          var checked = $("#addCommon").children().children("input:checked").map(function() {
@@ -50,10 +39,13 @@ $(document).ready(function(){
         if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
             var newAllergy = $("#newAllergy").val();
             $("#newAllergy").val("");
-            if (!allergiesList.includes(newAllergy)){ //don't add repeats
-                //add new allergy
-                allergiesList.push(newAllergy);
-                updateAllergies();
+            if(newAllergy !== ""){
+                console.log(newAllergy);
+                if (!allergiesList.includes(newAllergy)){ //don't add repeats
+                    //add new allergy
+                    allergiesList.push(newAllergy);
+                    updateAllergies();
+                }
             }
         }
     });
@@ -61,10 +53,12 @@ $(document).ready(function(){
     $('body').on("click","#submitNewAllergy", function(){
         var newAllergy = $("#newAllergy").val();
         $("#newAllergy").val("");
-        if (!allergiesList.includes(newAllergy)){ //don't add repeats
-            //add new allergy
-            allergiesList.push(newAllergy);
-            updateAllergies();
+        if(newAllergy !== ""){
+            if (!allergiesList.includes(newAllergy)){ //don't add repeats
+                //add new allergy
+                allergiesList.push(newAllergy);
+                updateAllergies();
+            }
         }
     });
     
