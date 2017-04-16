@@ -1,34 +1,38 @@
-//Strategy
-//make a model for the allergy list
-//make a div where allergies will be displayed
-//each allegry will have an edit and delete button next to it
-//be able to add a new allergy.
-//  - have a text input and add button
-//  - adding will update the model and we go through the model and append with jquery a new allergy object
-
 
 $(document).ready(function(){
     var allergiesList = [];
-    
-    //TODO: need to make sure can't add duplicates
-    
+
+    // Save data to sessionStorage
+    // sessionStorage.setItem('allergies', JSON.stringify(allergiesList));
+
+    // Get saved data from sessionStorage
+    var data = JSON.parse(sessionStorage.getItem('allergies'));
+    if(data){
+        allergiesList = data;
+    }
+
     var updateAllergies = function(){
         $("#myAllergies").empty();//so we don't add repeats
-        //go through and update the allergy list
+        
         for(allergy of allergiesList){
-            $("#myAllergies").append('<div class="allergyRow" id="'+allergy+'"Row"><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button><p class="allergyName">'+allergy+'</p></div>');
+            $("#myAllergies").append('<div class="allergyRow" id="'+allergy+'"Row"><p class="allergyName">'+allergy+'</p><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button></div>');
         }
+        sessionStorage.setItem('allergies', JSON.stringify(allergiesList));
     };
 
-    //http://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
-    $("body").on("click", ".deleteButton",function(){
+    if (data){
+        updateAllergies(); //need this to load any existing allergies
+    }
+    //deletes allergy when delete button is clicked
+    $("body").on("click", ".deleteButton",function(){//http://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
         //remove that allergy from the list
         allergiesList.splice(allergiesList.indexOf(this.id),1); //https://bytearcher.com/articles/how-to-delete-value-from-array/
         updateAllergies();
     });
 
-   
-    
+
+
+    //add allergies from common allergy list
     $("body").on("click", "#common",function(){
          var checked = $("#addCommon").children().children("input:checked").map(function() {
             return this.id;
@@ -45,11 +49,29 @@ $(document).ready(function(){
         updateAllergies();
     });
 
-    //http://stackoverflow.com/questions/16011312/execute-function-on-enter-key
-    $('body').on("keydown", function(e){
+
+    //Add allergies by pressing enter button
+    $('body').on("keydown", function(e){ //http://stackoverflow.com/questions/16011312/execute-function-on-enter-key
         if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
             var newAllergy = $("#newAllergy").val();
             $("#newAllergy").val("");
+            if(newAllergy !== ""){
+                console.log(newAllergy);
+                if (!allergiesList.includes(newAllergy)){ //don't add repeats
+                    //add new allergy
+                    allergiesList.push(newAllergy);
+                    updateAllergies();
+                }
+            }
+        }
+    });
+
+
+    //Add allergies by pressing add button
+    $('body').on("click","#submitNewAllergy", function(){
+        var newAllergy = $("#newAllergy").val();
+        $("#newAllergy").val("");
+        if(newAllergy !== ""){
             if (!allergiesList.includes(newAllergy)){ //don't add repeats
                 //add new allergy
                 allergiesList.push(newAllergy);
@@ -57,16 +79,5 @@ $(document).ready(function(){
             }
         }
     });
-
-    $('body').on("click","#submitNewAllergy", function(){
-        var newAllergy = $("#newAllergy").val();
-        $("#newAllergy").val("");
-        if (!allergiesList.includes(newAllergy)){ //don't add repeats
-            //add new allergy
-            allergiesList.push(newAllergy);
-            updateAllergies();
-        }
-    });
     
-
 });//keep at bottom of the file

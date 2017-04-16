@@ -10,10 +10,17 @@
     display:inline-block;
 }
 
-.profile #allergyDashboard{
-    
+
+.profile #submitInput{
+    display:none;
 }
 
-#submitInput{
-    display:none;
+.profile #newAllergy, #submitNewAllergy, .deleteButton{
+    height:2em;
+    font-size:1.5em;
+}
+
+.profile #submitNewAllergy,.deleteButton{
+    margin:5px;
+    border-radius: 10%;
 }
