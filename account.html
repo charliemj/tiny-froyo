@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="image/icon.png"> <!--icon source: https://icons8.com/web-app/13283/vegetarian-food-->    
-    <title>Eat Safe - My Allergies</title>   
+    <title>Eat Safe - My Account</title>   
     <!-- Google Fonts API -->
     <link rel="stylesheet" type="text/css"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
@@ -22,9 +22,8 @@
      <script src="javascript/addAllergies.js"></script>
  </head>
 
-<body class="profile">
-
-    <!--Source for this code: https://getbootstrap.com/components/#navbar-->
+<body>
+ <!--Source for this code: https://getbootstrap.com/components/#navbar-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,67 +49,7 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-  
-  <div class='container'>
-    <div class='col-md-4 text-left' id='firstColumn'>
-      <form id="addCommon">
-          <legend>Add Common Allergies</legend>
-          <div>
-            <input type="checkbox" id="Soy"  value="soy">
-            <label for="soy">Soy</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Nuts" value="nuts">
-            <label for="nuts">Peanuts</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Treenuts" value="treenuts">
-            <label for="treenuts">Treenuts</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Fish" value="fish">
-            <label for="fish">Fish</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Milk" value="milk">
-            <label for="milk">Milk</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Gluten" value="gluten">
-            <label for="gluten">Gluten</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Wheat" value="wheat">
-            <label for="wheat">Wheat</label>
-          </div>
-          <div>
-            <input type="checkbox" id="Shellfish" value="shellfish">
-            <label for="shellfish">Shellfish</label>
-          </div>
 
-          <div>
-             <button type="button" id="common">Add Allergies</button>
-          </div>
-        </form>
-    </div>
-
-
-  <div class='col-md-8  text-left' id='mainColumn'>
-    <h1>My Allergies</h1>
-      <div id="allergyDashboard">
-        <div id="myAllergies">
-          <!--Allergies displayed here-->
-        </div>
-        <br>
-        <form>
-            <input id="newAllergy" type="text" name="allergy" placeholder="My allergy" autofocus>
-            <input id="submitInput" type="text" value="Submit"> <!--this is important for being able to press enter-->
-            <button type="button" id="submitNewAllergy">Add</button>
-        </form>
-      </div>
-    </div>
-    
-    <!-- <div class='col-md-4  text-left' id='thirdColumn'> -->
-
+    <h1>Your account info</h1>
 </body>
 </html>
