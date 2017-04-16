@@ -10,14 +10,17 @@ $(document).ready(function(){
         }
     };
 
-    //http://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
-    $("body").on("click", ".deleteButton",function(){
+    
+    //deletes allergy when delete button is clicked
+    $("body").on("click", ".deleteButton",function(){//http://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
         //remove that allergy from the list
         allergiesList.splice(allergiesList.indexOf(this.id),1); //https://bytearcher.com/articles/how-to-delete-value-from-array/
         updateAllergies();
     });
 
-    
+
+
+    //add allergies from common allergy list
     $("body").on("click", "#common",function(){
          var checked = $("#addCommon").children().children("input:checked").map(function() {
             return this.id;
@@ -34,8 +37,9 @@ $(document).ready(function(){
         updateAllergies();
     });
 
-    //http://stackoverflow.com/questions/16011312/execute-function-on-enter-key
-    $('body').on("keydown", function(e){
+
+    //Add allergies by pressing enter button
+    $('body').on("keydown", function(e){ //http://stackoverflow.com/questions/16011312/execute-function-on-enter-key
         if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
             var newAllergy = $("#newAllergy").val();
             $("#newAllergy").val("");
@@ -50,6 +54,8 @@ $(document).ready(function(){
         }
     });
 
+
+    //Add allergies by pressing add button
     $('body').on("click","#submitNewAllergy", function(){
         var newAllergy = $("#newAllergy").val();
         $("#newAllergy").val("");
@@ -62,5 +68,4 @@ $(document).ready(function(){
         }
     });
     
-
 });//keep at bottom of the file
