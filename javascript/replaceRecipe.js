@@ -10,16 +10,13 @@
 				$('#replacementList').remove();
 				$('#resetButton').remove();
 			}
-			var list = '<div id="replacementList"><li class="replacement" id="azuki1">azuki beans</li><li class="replacement" id="chickpea1">chickpea and rice paste</li></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-info btn-lg" onclick="resetReplacements()" style="">Reset replacements for tofu</button>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1">azuki beans</li><li class="replacement" id="chickpea1">chickpea and rice paste</li></ul></div>';
+			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetReplacements()" style="">Reset replacements for tofu</button>';
 	
 			$('#firstColumn').append(list+replaceButton);
-			$('#azuki1').append('<br>- a Japanese dessert, "sekihan"');
-			$('#azuki1').append('<br>- high in fiber');
-			$('#azuki1').append('<br><span id="azuki-more">more...</span>');
-			$('#chickpea1').append('<br>-greek comfort food');
-			$('#chickpea1').append('<br><span id="chickpea-more">more...</span>');
-			
+			$('#azuki1').append('<ul><li>a Japanese dessert, "sekihan"</li><li> high in fiber</li><li>more...</li></ul>');
+			$('#chickpea1').append('<br><ul><li>-greek comfort food</li><li id="chickpea-more">more...</li></ul>');
+
 			$('#header').html('Replacing: Tofu');
 			
 			addListener(this);
@@ -33,14 +30,11 @@
 				$('#replacementList').remove();
 				$('#resetButton').remove();
 			}
-			var list = '<div id="replacementList"><li class="replacement" id="coconut1">coconut aminos</li><li class="replacement" id="canola1">canola oil</li></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-info btn-lg" onclick="resetReplacements()" style="">Reset replacements for soy sauce</button>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1">coconut aminos</li><li class="replacement" id="canola1">canola oil</li></ul></div>';
+			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetReplacements()" style="">Reset replacements for soy sauce</button>';
 			$('#firstColumn').append(list+replaceButton);	
-			$('#coconut1').append('<br>- from the nutrient rich sap of the coconut trees');
-			$('#coconut1').append('<br>- contains 17 amino acids');
-			$('#coconut1').append('<br><span id="coconut-more">more...</span>');	
-			$('#canola1').append('<br>-low in saturate fat, high in unsaturated fat');
-			$('#canola1').append('<br><span id="canola-more">more...</span>');
+			$('#coconut1').append('<ul><li>from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li><li>more...</li></ul>');	
+			$('#canola1').append('<ul><li>low in saturate fat, high in unsaturated fat</li><li>more...</li>');
 			$('#header').html('Replacing: Soy sauce');
 		
 			addListener(this);
@@ -51,23 +45,30 @@
 	   
 	function addListener(allergen){
 	  $('.replacement').on('click', function() {
-			var replacementName = this.innerHTML.split('<br>')[0];
+			var replacementName = this.innerHTML.split('<ul>')[0];
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
 			allergenClass.html(replacementName);	
 			allergenClass.css('background-color', "lightgreen");
+			allergenClass.css('color', "black");
     		setTimeout(complete1, 300);
     		function complete1() {
     			allergenClass.css('background-color', "white");
+				allergenClass.css('color', "green");
     			setTimeout(complete2, 300);
     		}
     		function complete2() {
     			allergenClass.css('background-color', "lightgreen");
+				allergenClass.css('color', "black");
     			setTimeout(complete3, 300);
     		}
-    		function complete3() {
+			function complete1() {
     			allergenClass.css('background-color', "white");
 				allergenClass.css('color', "green");
-				allergenClass.css('font-weight', "bold");
+    			setTimeout(complete2, 300);
+    		}
+    		function complete3() {
+    			allergenClass.css('background-color', "lightgreen");
+				allergenClass.css('color', "black");
     		}			
 			chosenIntgredient = this;
 	  });
@@ -86,7 +87,7 @@
 		$(".tofu").html('tofu');
 		$(".soy_sauce").html('soy sauce');
 		$(".allergen").css('background-color', "#ed6363");
-		$(".allergen").css('color', "black");
+		$(".allergen").css("color", "white");
 		$(".allergen").css('font-weight', "normal");
 	}
 
