@@ -70,8 +70,9 @@
         <br>
   	  
         <span id="default">
-        Click on an allergen to replace...
-
+		<br>
+		<br>
+        Click on an allergen to replace it.
         </span>
   	  <div id="header">
   	  </div>
@@ -87,7 +88,7 @@
       <!-- Column 2 Code Here -->
       <br>
 	  
-	  <button id="printButton" type="button" class="noprint btn btn-primary btn-lg" onclick="printRecipe()" style="float: right;">Print Recipe</button>
+	  <button id="printButton" type="button" class="noprint btn btn-info btn-lg" onclick="printRecipe()" style="float: right;">Print Recipe</button>
 
 
       <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>	  
@@ -96,38 +97,48 @@
         <!-- Recipe source: https://mykoreankitchen.com/kimchi-jjigae/ -->
         <div class="wprm-recipe wprm-recipe-clean-print">
           <h2 class="wprm-recipe-name">The classic, Kimchi Jjigae</h2>
+		  <br>
           <div class="wprm-recipe-summary"></div>
-          <div class="wprm-recipe-details-container wprm-recipe-tags-container">
-            <div class="wprm-recipe-course-container">
-              <span class="wprm-recipe-details-name wprm-recipe-course-name">Course</span> <span class="wprm-recipe-course" itemprop="recipeCategory">Soup</span>
-            </div>
-            <div class="wprm-recipe-cuisine-container">
-              <span class="wprm-recipe-details-name wprm-recipe-cuisine-name">Cuisine</span> <span class="wprm-recipe-cuisine" itemprop="recipeCuisine">Korean</span>
-            </div>
-          </div>
-
+          
+		 <table>
+		 <tr>
+		  <td>
           <div class="wprm-recipe-image">
             <img width="150" height="150" src="./image./kimchijiggae.jpg" class="attachment-thumbnail size-thumbnail" alt="The classic Kimchi Jjigae (Kimchi stew) recipe with some fatty pork. When the fat from the pork melts into the soup, it becomes irresistibly delicious! | MyKoreanKitchen.com" srcset="https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-150x150.jpg 150w, https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-320x320.jpg 320w, https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-150x150@2x.jpg 300w, https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-320x320@2x.jpg 640w" sizes="(max-width: 150px) 100vw, 150px">
           </div>
-
+          </td>
+		  <td>
+		  <div id="overall-information">
+		  <div class="wprm-recipe-details-container wprm-recipe-tags-container">
+            <div class="wprm-recipe-course-container">
+              <span class="wprm-recipe-details-name wprm-recipe-course-name">Course: </span> <span class="wprm-recipe-course" itemprop="recipeCategory">Soup</span>
+            </div>
+            <div class="wprm-recipe-cuisine-container">
+              <span class="wprm-recipe-details-name wprm-recipe-cuisine-name">Cuisine: </span> <span class="wprm-recipe-cuisine" itemprop="recipeCuisine">Korean</span>
+            </div>
+          </div>
           <div class="wprm-recipe-details-container wprm-recipe-times-container">
             <div class="wprm-recipe-prep-time-container">
-              <span class="wprm-recipe-details-name wprm-recipe-prep-time-name">Prep Time</span> <span class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-prep_time wprm-recipe-prep_time-minutes">15</span> <span class="wprm-recipe-details-unit wprm-recipe-details-minutes wprm-recipe-prep_time-unit wprm-recipe-prep_timeunit-minutes">minutes</span>
+              <span class="wprm-recipe-details-name wprm-recipe-prep-time-name">Prep Time: </span> <span class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-prep_time wprm-recipe-prep_time-minutes">15</span> <span class="wprm-recipe-details-unit wprm-recipe-details-minutes wprm-recipe-prep_time-unit wprm-recipe-prep_timeunit-minutes">minutes</span>
             </div>
             <div class="wprm-recipe-cook-time-container">
-              <span class="wprm-recipe-details-name wprm-recipe-cook-time-name">Cook Time</span> <span class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-cook_time wprm-recipe-cook_time-minutes">15</span> <span class="wprm-recipe-details-unit wprm-recipe-details-minutes wprm-recipe-cook_time-unit wprm-recipe-cook_timeunit-minutes">minutes</span>
+              <span class="wprm-recipe-details-name wprm-recipe-cook-time-name">Cook Time: </span> <span class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-cook_time wprm-recipe-cook_time-minutes">15</span> <span class="wprm-recipe-details-unit wprm-recipe-details-minutes wprm-recipe-cook_time-unit wprm-recipe-cook_timeunit-minutes">minutes</span>
             </div>
             <div class="wprm-recipe-total-time-container">
-              <span class="wprm-recipe-details-name wprm-recipe-total-time-name">Total Time</span> <span class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-total_time wprm-recipe-total_time-minutes">30</span> <span class="wprm-recipe-details-unit wprm-recipe-details-minutes wprm-recipe-total_time-unit wprm-recipe-total_timeunit-minutes">minutes</span>
+              <span class="wprm-recipe-details-name wprm-recipe-total-time-name">Total Time: </span> <span class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-total_time wprm-recipe-total_time-minutes">30</span> <span class="wprm-recipe-details-unit wprm-recipe-details-minutes wprm-recipe-total_time-unit wprm-recipe-total_timeunit-minutes">minutes</span>
             </div>
           </div>
           <div class="wprm-recipe-details-container">
             <div class="wprm-recipe-servings-container">
-              <span class="wprm-recipe-details-name wprm-recipe-servings-name">Servings</span> <span class="wprm-recipe-details wprm-recipe-servings">2</span> <span class="wprm-recipe-details-unit wprm-recipe-servings-unit">to 3</span>
+              <span class="wprm-recipe-details-name wprm-recipe-servings-name">Servings: </span> <span class="wprm-recipe-details wprm-recipe-servings">2</span> <span class="wprm-recipe-details-unit wprm-recipe-servings-unit">to 3</span>
             </div>
           </div>
+		  </div>
+		  </td>
+		  <tr>
+		  </table>
           <div class="wprm-recipe-ingredients-container">
-            <h3 class="wprm-recipe-header">Ingredients</h3>
+            <h3 class="wprm-recipe-header"><img id="headerImage" src="https://techforluddites.com/images/leaf_icon.jpg">Ingredients</h3>
             <div class="wprm-recipe-ingredient-group">
               <h4 class="wprm-recipe-group-name wprm-recipe-ingredient-group-name">Meat</h4>
               <ul class="wprm-recipe-ingredients">
@@ -159,7 +170,7 @@
             </div>
           </div>
           <div class="wprm-recipe-instructions-container">
-            <h3 class="wprm-recipe-header">Instructions</h3>
+            <h3 class="wprm-recipe-header"><img id="headerImage" src="https://techforluddites.com/images/leaf_icon.jpg">Instructions</h3>
             <div class="wprm-recipe-instruction-group">
               <ol class="wprm-recipe-instructions">
                 <li class="wprm-recipe-instruction">
@@ -191,9 +202,11 @@
             </div>
           </div>
           <div class="wprm-recipe-notes-container">
-            <h3 class="wprm-recipe-header">Recipe Notes</h3>
+            <h3 class="wprm-recipe-header"><img id="headerImage" src="https://techforluddites.com/images/leaf_icon.jpg">Recipe Notes</h3>
             <div class="ERSSectionHead">
               1 Tbsp = 15 ml, 1 Cup = 250 ml
+			  <br>
+			  <br>
             </div>
           </div>
         </div>
