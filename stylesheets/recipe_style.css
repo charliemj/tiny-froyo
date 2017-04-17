@@ -77,10 +77,27 @@
 width: 100%;
 }
 #overall-information{
-	padding-left: 20px;
+	padding-left: 35px;
 }
 #headerImage{
     width: 18px;
     vertical-align: middle;
 	margin-right: 2px;
+}
+
+.ingredientCategory{
+	padding-left:16px;
+}
+
+.wprm-recipe-details-name{
+	padding-left:65px;
+}
+
+#wprm-recipe-image{
+	padding-left:35px;
+	padding-bottom:20px;
+}
+
+.recipeAnswer{
+	padding-right:15px;
 }
