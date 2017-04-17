@@ -11,7 +11,7 @@
 				$('#resetButton').remove();
 			}
 			var list = '<div id="replacementList"><li class="replacement" id="azuki1">azuki beans</li><li class="replacement" id="chickpea1">chickpea and rice paste</li></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-primary btn-lg" onclick="resetReplacements()" style="">Reset replacements</button>';
+			var replaceButton = '<button id="resetButton" type="button" class="btn btn-info btn-lg" onclick="resetReplacements()" style="">Reset replacements for tofu</button>';
 	
 			$('#firstColumn').append(list+replaceButton);
 			$('#azuki1').append('<br>- a Japanese dessert, "sekihan"');
@@ -20,7 +20,7 @@
 			$('#chickpea1').append('<br>-greek comfort food');
 			$('#chickpea1').append('<br><span id="chickpea-more">more...</span>');
 			
-			$('#header').html('Tofu');
+			$('#header').html('Replacing: Tofu');
 			
 			addListener(this);
 
@@ -34,14 +34,14 @@
 				$('#resetButton').remove();
 			}
 			var list = '<div id="replacementList"><li class="replacement" id="coconut1">coconut aminos</li><li class="replacement" id="canola1">canola oil</li></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-primary btn-lg" onclick="resetReplacements()" style="">Reset replacements</button>';
+			var replaceButton = '<button id="resetButton" type="button" class="btn btn-info btn-lg" onclick="resetReplacements()" style="">Reset replacements for soy sauce</button>';
 			$('#firstColumn').append(list+replaceButton);	
 			$('#coconut1').append('<br>- from the nutrient rich sap of the coconut trees');
 			$('#coconut1').append('<br>- contains 17 amino acids');
 			$('#coconut1').append('<br><span id="coconut-more">more...</span>');	
 			$('#canola1').append('<br>-low in saturate fat, high in unsaturated fat');
 			$('#canola1').append('<br><span id="canola-more">more...</span>');
-			$('#header').html('Soy sauce');
+			$('#header').html('Replacing: Soy sauce');
 		
 			addListener(this);
 			
