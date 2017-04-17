@@ -64,3 +64,23 @@
     overflow-y: auto;
     padding: 0 15px;
 }
+
+#default{
+	 font-size:1.7em;
+}
+
+#mainColumnExceptPrintButton{
+	 padding-left: 25px;
+}
+
+.table{
+width: 100%;
+}
+#overall-information{
+	padding-left: 20px;
+}
+#headerImage{
+    width: 18px;
+    vertical-align: middle;
+	margin-right: 2px;
+}
