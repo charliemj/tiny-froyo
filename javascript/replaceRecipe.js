@@ -1,5 +1,6 @@
 
 	  var chosenIntgredient;
+	  var currentAllergen;
 	
 	  //when user clicks on tofu 
 	  $(document).ready(function(){
@@ -11,7 +12,7 @@
 				$('#resetButton').remove();
 			}
 			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1">azuki beans</li><li class="replacement" id="chickpea1">chickpea and rice paste</li></ul></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetReplacements()" style="">Reset replacements for tofu</button>';
+			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button>';
 	
 			$('#firstColumn').append(list+replaceButton);
 			$('#azuki1').append('<ul><li>a Japanese dessert, "sekihan"</li><li> high in fiber</li><li>more...</li></ul>');
@@ -20,6 +21,8 @@
 			$('#header').html('Replacing: Tofu');
 			
 			addListener(this);
+			
+			currentAllergen = "tofu";
 
 		});
 		
@@ -31,7 +34,7 @@
 				$('#resetButton').remove();
 			}
 			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1">coconut aminos</li><li class="replacement" id="canola1">canola oil</li></ul></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetReplacements()" style="">Reset replacements for soy sauce</button>';
+			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button>';
 			$('#firstColumn').append(list+replaceButton);	
 			$('#coconut1').append('<ul><li>from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li><li>more...</li></ul>');	
 			$('#canola1').append('<ul><li>low in saturate fat, high in unsaturated fat</li><li>more...</li>');
@@ -39,6 +42,7 @@
 		
 			addListener(this);
 			
+			currentAllergen = "soy sauce";
 			
 		});
 	   });
@@ -82,12 +86,17 @@
         window.frames["print_frame"].window.print();		
 	}
 	
-	function resetReplacements(){
-		
-		$(".tofu").html('tofu');
-		$(".soy_sauce").html('soy sauce');
-		$(".allergen").css('background-color', "#ed6363");
-		$(".allergen").css("color", "white");
-		$(".allergen").css('font-weight', "normal");
+	function resetChosenReplacement(){
+		var allergenToReset;
+		if(currentAllergen == "tofu"){
+			allergenToReset = $('.tofu');
+			allergenToReset.html('tofu');
+		}else if(currentAllergen == "soy sauce"){
+			allergenToReset = $('.soy_sauce');
+			allergenToReset.html('soy sauce');
+		}
+		allergenToReset.css('background-color', "#ed6363");
+		allergenToReset.css("color", "white");
+		allergenToReset.css('font-weight', "normal");
 	}
 
