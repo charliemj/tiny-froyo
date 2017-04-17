@@ -21,10 +21,10 @@ html, body{
 
 /** Universal styles **/
 .navbar-default .navbar-brand {
-	font-size: 4em;
+	font-size: 3.7em;
 	font-weight: bold;
 	color: #88c96c;
-	padding-top: 20px;
+	padding-top: 15px;
 	padding-left: 40px;
 }
 
