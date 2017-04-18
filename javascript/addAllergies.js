@@ -13,9 +13,10 @@ $(document).ready(function(){
 
     var updateAllergies = function(){
         $("#myAllergies").empty();//so we don't add repeats
-        
+     
         for(allergy of allergiesList){
-            $("#myAllergies").append('<div class="allergyRow" id="'+allergy+'"Row"><p class="allergyName">'+allergy+'</p><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button></div>');
+            $("#myAllergies").append('<div class="allergyRow row" id="'+allergy+'"Row"><div class="col-md-2 allergyNameColumn"><p class="allergyName">'+allergy+'</p></div>'
+			+'<div class="col-md-10 deleteButtonColumn"><button class="deleteButton" id="'+allergy+'"'+'type="button">Delete</button></div></div>');
         }
         sessionStorage.setItem('allergies', JSON.stringify(allergiesList));
     };
