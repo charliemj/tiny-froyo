@@ -10,8 +10,8 @@
 				$('#replacementList').remove();
 				$('#buttonSpace').remove();
 			}
-			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1"><div class="rep-title">azuki beans</div></li><br><br><li class="replacement" id="chickpea1"><div class="rep-title">chickpea and rice paste</div></li></ul></div>';
-			var replaceButton = '<div id="buttonSpace"><br><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button></div>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1"><div class="rep-title">azuki beans</div></li><li class="replacement" id="chickpea1"><div class="rep-title">chickpea and rice paste</div></li></ul></div>';
+			var replaceButton = '<div id="buttonSpace"><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button></div>';
 	
 			$('#firstColumn').append(list+replaceButton);
 			$('#azuki1').append('<ul> <div class="rep-description"><li>Source of plentiful protein</li><li>High in fiber</li></div>'
@@ -40,8 +40,8 @@
 				$('#replacementList').remove();
 				$('#buttonSpace').remove();
 			}
-			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1"><div class="rep-title">coconut aminos</div></li><br><br><li class="replacement" id="canola1"><div class="rep-title">canola oil</div></li></ul></div>';
-			var replaceButton = '<div id="buttonSpace"><br><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button></div>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1"><div class="rep-title">coconut aminos</div></li><li class="replacement" id="canola1"><div class="rep-title">canola oil</div></li></ul></div>';
+			var replaceButton = '<div id="buttonSpace"><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button></div>';
 			$('#firstColumn').append(list+replaceButton);	
 			$('#coconut1').append('<ul> <div class="rep-description"><li>Comes from the nutrient rich sap of the coconut trees</li><li>Contains 17 amino acids</li></div>'
 				+'<li class="more"><div class="tooltipDiv" >more.. '
