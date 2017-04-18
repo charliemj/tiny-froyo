@@ -1,15 +1,30 @@
 /** Profile page styles **/
 
+.profile #firstColumn {
+	margin-top:25px;
+	border-right:1px solid #ddd;
+	max-width: 300px;
+	margin-right: 25px;
+}
+
+.profile #sideHeader {
+	font-size: 1.7em;
+	color:#555;
+	margin-bottom: 10px;
+}
+
 .profile #myAllergies{
-    background-color:#bdbdbd;    
+    background-color:#FFF; 
 }
 
 .profile .deleteButton, .allergyName{
     margin:10px;
-    
     display:inline-block;
 }
 
+.profile label {
+	font-weight: 300;
+}
 
 .profile #submitInput{
     display:none;
@@ -18,9 +33,28 @@
 .profile #newAllergy, #submitNewAllergy{
     height:2em;
     font-size:1.5em;
+    padding:5px;
+}
+
+.profile #newAllergy {
+	width: 315px;
 }
 
 .profile #submitNewAllergy{
     margin:5px;
     border-radius: 10%;
+}
+
+.profile .allergyRow {
+	max-width: 400px;
+	margin-bottom:2px;
+	background-color: #EEE;
+}
+
+.profile .deleteButton {
+	float: right;
+}
+
+.profile form {
+	max-width: 400px;
 }
