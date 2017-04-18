@@ -1,5 +1,4 @@
 
-	  var chosenIntgredient;
 	  var currentAllergen;
 	
 	  //when user clicks on tofu 
@@ -11,12 +10,12 @@
 				$('#replacementList').remove();
 				$('#resetButton').remove();
 			}
-			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1">azuki beans</li><li class="replacement" id="chickpea1">chickpea and rice paste</li></ul></div>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1"><div class="rep-title">azuki beans</div></li><li class="replacement" id="chickpea1"><div class="rep-title">chickpea and rice paste</div></li></ul></div>';
 			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button>';
 	
 			$('#firstColumn').append(list+replaceButton);
-			$('#azuki1').append('<ul><li>a Japanese dessert, "sekihan"</li><li> high in fiber</li><li>more...</li></ul>');
-			$('#chickpea1').append('<br><ul><li>-greek comfort food</li><li id="chickpea-more">more...</li></ul>');
+			$('#azuki1').append('<ul> <div class="rep-description"><li>a Japanese dessert, "sekihan"</li><li> high in fiber</li></div><li class="more" >more...</li></ul>');
+			$('#chickpea1').append('<ul><div class="rep-description"><li>-greek comfort food</li></div><li class="more">more...</li></ul>');
 
 			$('#header').html('Replacing: Tofu');
 			
@@ -33,11 +32,11 @@
 				$('#replacementList').remove();
 				$('#resetButton').remove();
 			}
-			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1">coconut aminos</li><li class="replacement" id="canola1">canola oil</li></ul></div>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1"><div class="rep-title">coconut aminos</div></li><li class="replacement" id="canola1"><div class="rep-title">canola oil</div></li></ul></div>';
 			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button>';
 			$('#firstColumn').append(list+replaceButton);	
-			$('#coconut1').append('<ul><li>from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li><li>more...</li></ul>');	
-			$('#canola1').append('<ul><li>low in saturate fat, high in unsaturated fat</li><li>more...</li>');
+			$('#coconut1').append('<ul> <div class="rep-description"><li>from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li></div><li class="more" >more...</li></ul>');	
+			$('#canola1').append('<ul> <div class="rep-description"><li>low in saturate fat, high in unsaturated fat</li></div><li class="more">more...</li>');
 			$('#header').html('Replacing: Soy sauce');
 		
 			addListener(this);
@@ -74,7 +73,6 @@
     			allergenClass.css('background-color', "lightgreen");
 				allergenClass.css('color', "black");
     		}			
-			chosenIntgredient = this;
 	  });
 	}
 	
