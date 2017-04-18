@@ -1,7 +1,0 @@
-
-- Profile page
-- recipie page
--- side bar where there is suggestions
-
-- Allergy/profile page, chrome extension silly page
-- I will make the html and css skeleton
