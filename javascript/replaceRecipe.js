@@ -27,11 +27,12 @@
 			
 			$('#header').html('Replacing: Tofu');
 			
-			addListener(this);
-			
+			addReplacementListener(this);
+			addTooltipListener();
 			currentAllergen = "tofu";
 
 		});
+
 		
 		$(".soy_sauce").click(function(){
 			$('#default').html('');
@@ -45,7 +46,7 @@
 			$('#firstColumn').append(list+replaceButton);	
 			$('#coconut1').append('<ul> <div class="rep-description"><li>Comes from the nutrient rich sap of the coconut trees</li><li>Contains 17 amino acids</li></div>'
 				+'<li class="more"><div class="tooltipDiv" >more.. '
-				+'<span class="tooltiptext">*Reduce risk of diabetes'
+				+'<span class="tooltiptext" id="d">*Reduce risk of diabetes'
 				+'<br>*Regulates cholesterol'
 				+'</li></ul>');
 			
@@ -56,14 +57,21 @@
 				+'</div></li></ul>');
 			$('#header').html('Replacing: Soy sauce');
 		
-			addListener(this);
-			
+			addReplacementListener(this);
+			addTooltipListener();
 			currentAllergen = "soy sauce";
 			
 		});
 	   });
+
+	function addTooltipListener(){
+$		('.tooltiptext').click(function(e){
+			e.stopPropagation();
+		});
+		
+	}	
 	   
-	function addListener(allergen){
+	function addReplacementListener(allergen){
 	  $('.replacement').on('click', function() {
 			var replacementName = this.innerHTML.split('<ul>')[0];
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
