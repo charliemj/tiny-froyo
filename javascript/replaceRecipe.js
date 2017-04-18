@@ -64,11 +64,6 @@
 				allergenClass.css('color', "black");
     			setTimeout(complete3, 300);
     		}
-			function complete1() {
-    			allergenClass.css('background-color', "white");
-				allergenClass.css('color', "green");
-    			setTimeout(complete2, 300);
-    		}
     		function complete3() {
     			allergenClass.css('background-color', "lightgreen");
 				allergenClass.css('color', "black");
@@ -77,11 +72,11 @@
 	}
 	
 	function printRecipe(){
-		recipeCSS = new String ('<link href="../stylesheets/styles-master.css" rel="stylesheet">');
-		mainCSS = new String('<link href="../stylesheets/recipe_style.css" rel="stylesheet">');
+		var recipeCSS = new String ('<link href="https://kar-moore.github.io/tiny-froyo/stylesheets/styles-master.css" rel="stylesheet" type="text/css" >');
+		var mainCSS = new String('<link href="https://kar-moore.github.io/tiny-froyo/stylesheets/recipe_style.css" rel="stylesheet" type="text/css" >');
 		window.frames["print_frame"].document.body.innerHTML= recipeCSS + mainCSS + document.getElementById('mainColumnExceptPrintButton').innerHTML;
         window.frames["print_frame"].window.focus();
-        window.frames["print_frame"].window.print();		
+        window.frames["print_frame"].window.print();	
 	}
 	
 	function resetChosenReplacement(){
