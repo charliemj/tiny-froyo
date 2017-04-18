@@ -8,15 +8,23 @@
 			//check if list exists
 			if($('#replacementList')){
 				$('#replacementList').remove();
-				$('#resetButton').remove();
+				$('#buttonSpace').remove();
 			}
-			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1"><div class="rep-title">azuki beans</div></li><li class="replacement" id="chickpea1"><div class="rep-title">chickpea and rice paste</div></li></ul></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="azuki1"><div class="rep-title">azuki beans</div></li><br><br><li class="replacement" id="chickpea1"><div class="rep-title">chickpea and rice paste</div></li></ul></div>';
+			var replaceButton = '<div id="buttonSpace"><br><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button></div>';
 	
 			$('#firstColumn').append(list+replaceButton);
-			$('#azuki1').append('<ul> <div class="rep-description"><li>a Japanese dessert, "sekihan"</li><li> high in fiber</li></div><li class="more" >more...</li></ul>');
-			$('#chickpea1').append('<ul><div class="rep-description"><li>-greek comfort food</li></div><li class="more">more...</li></ul>');
-
+			$('#azuki1').append('<ul> <div class="rep-description"><li>Source of plentiful protein</li><li>High in fiber</li></div>'
+						+'<li class="more"><div class="tooltipDiv" >more.. '
+						+'<span class="tooltiptext">- Help mange diabetes'
+						+'<br>- Increases antioxidant intake'
+						+'<br>- Improves heart health</span></div></li></ul>');
+			
+			$('#chickpea1').append('<ul><div class="rep-description"><li>Package of protein and vitamins</li><li>Keep blood sugar levels stable</li></div>'
+						+'<li class="more"><div class="tooltipDiv" >more.. '
+						+'<span class="tooltiptext">-Boosts digestion'
+						+'<br>-Increases satiety.</span></div></li></ul>');
+			
 			$('#header').html('Replacing: Tofu');
 			
 			addListener(this);
@@ -30,13 +38,22 @@
 			//check if list exists
 			if($('#replacementList')){
 				$('#replacementList').remove();
-				$('#resetButton').remove();
+				$('#buttonSpace').remove();
 			}
-			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1"><div class="rep-title">coconut aminos</div></li><li class="replacement" id="canola1"><div class="rep-title">canola oil</div></li></ul></div>';
-			var replaceButton = '<button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button>';
+			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1"><div class="rep-title">coconut aminos</div></li><br><br><li class="replacement" id="canola1"><div class="rep-title">canola oil</div></li></ul></div>';
+			var replaceButton = '<div id="buttonSpace"><br><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button></div>';
 			$('#firstColumn').append(list+replaceButton);	
-			$('#coconut1').append('<ul> <div class="rep-description"><li>from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li></div><li class="more" >more...</li></ul>');	
-			$('#canola1').append('<ul> <div class="rep-description"><li>low in saturate fat, high in unsaturated fat</li></div><li class="more">more...</li>');
+			$('#coconut1').append('<ul> <div class="rep-description"><li>from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li></div>'
+				+'<li class="more"><div class="tooltipDiv" >more.. '
+				+'<span class="tooltiptext">- Help mange diabetes'
+				+'<br>- Increases antioxidant intake'
+				+'<br>- Improves heart health</span></div></li></ul>');
+			
+			$('#canola1').append('<ul> <div class="rep-description"><li>low in saturate fat, high in unsaturated fat</li></div>'
+				+'<li class="more"><div class="tooltipDiv" >more..'
+				+'<span class="tooltiptext">- Help mange diabetes'
+				+'<br>- Increases antioxidant intake'
+				+'<br>- Improves heart health</span></div></li></ul>');
 			$('#header').html('Replacing: Soy sauce');
 		
 			addListener(this);

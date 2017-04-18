@@ -146,3 +146,43 @@ width: 100%;
 	color:blue;
 	text-decoration: underline;
 }
+
+.tooltipDiv {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltipDiv .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: rgba(50, 200, 54, 0.5);
+    color: #000;
+    text-align: left;
+    border-radius: 8px;
+    padding: 7px 7px 7px 15px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+	top: 130%;
+    left: 125%;
+    margin-left: -60px;
+
+}
+
+.tooltipDiv .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 20%;
+    margin-left: -20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(50, 200, 54, 0.5) transparent;
+}
+
+
+.tooltipDiv:hover .tooltiptext {
+    visibility: visible;
+}
