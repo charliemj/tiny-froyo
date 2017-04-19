@@ -1,53 +1,50 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+
+<script type="text/javascript">
+
+</script>
     <meta charset="utf-8">
-    <link rel="icon" href="image/icon.png"> <!--icon source: https://icons8.com/web-app/13283/vegetarian-food-->
-    <title>Eat Safe - Replace Recipe</title>
+    <link rel="icon" href="image/icon.png"> <!--icon source: https://icons8.com/web-app/13283/vegetarian-food-->    
+    <title>Eat Safe - Edit a recipe</title>   
     <!-- Google Fonts API -->
     <link rel="stylesheet" type="text/css"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <!-- Latest compiled and minified CSS Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="stylesheets/styles-master.css" rel="stylesheet">
-    <link href="stylesheets/recipe_style.css" rel="stylesheet">
+    <link href="stylesheets/landing.css" rel="stylesheet">
 
-    
     <!--jQuery 3-->
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <!-- Script for replacing allergen -->
-  <script src="javascript/replaceRecipe.js"></script>
-  
-</head>
+    <script src="javascript/landing.js"></script>
+ </head>
 
+<body class="landing">
 
-<body class="recipe">
-
-<!--Source for this code: https://getbootstrap.com/components/#navbar-->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <!--Source for this code: https://getbootstrap.com/components/#navbar-->
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-
           <a class="navbar-brand" href="index.html">Eat Safe</a>
         </div>
+
         <div class="collapse navbar-collapse">
          
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="#">Link</a></li> --> <!--can add other links like this-->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle accountButton" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >My Account<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="profile.html" target="_blank">My Allergies</a></li>
                 <li><a href="account.html" target="_blank">Account Information</a></li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="logout.html" target="_blank" >Logout</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="faq.html">FAQ</a></li>
               </ul>
@@ -56,181 +53,22 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-
-
-
-<div class='container'>
-  <div class='row'>
-
-  <div id="wrapper">
-    <div id="sidebar-wrapper" class="col-md-3">
-      <div class='text-left left-panel' id='firstColumn'>
-        <!-- Column 1 Code Here -->    
-        <br>
-      
-        <span id="default">
-    <br>
-    <br>
-        Click on an allergen to replace it.
-        </span>
-    <br>
-    <br>
-      <div id="header">
-      </div>
-    
-      
-    
-     </div>
-    </div>
-
-    <div id="main-wrapper" class="col-md-9 pull-right">
-
-    <div class='text-left ' id='mainColumn'>
-
-      <!-- Column 2 Code Here -->
-      <br>
-    
-    <button id="printButton" type="button" class="noprint btn btn-success btn-lg" onclick="printRecipe()" style="float: right;">Print Recipe</button>
-
-
-      <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>   
-      <div id="mainColumnExceptPrintButton">
-        
-        <!-- Recipe source: https://mykoreankitchen.com/kimchi-jjigae/ -->
-        <div class="wprm-recipe wprm-recipe-clean-print">
-          <h2 class="wprm-recipe-name">The classic, Kimchi Jjigae</h2>
-      <br>
-          <div class="wprm-recipe-summary"></div>
-          
-     <table>
-     <tr>
-      <td>
-          <div id="wprm-recipe-image">
-            <img id="foodImage" width="200" height="200" src="./image./kimchijiggae.jpg" class="attachment-thumbnail size-thumbnail" alt="The classic Kimchi Jjigae (Kimchi stew) recipe with some fatty pork. When the fat from the pork melts into the soup, it becomes irresistibly delicious! | MyKoreanKitchen.com" srcset="https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-150x150.jpg 150w, https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-320x320.jpg 320w, https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-150x150@2x.jpg 300w, https://koreankitchen-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/1.-Kimchi-Jjigae-320x320@2x.jpg 640w" sizes="(max-width: 150px) 100vw, 150px">
-          </div>
-          </td>
-      <td>
-      <div id="overall-information" class="container">
-            <div class="wprm-recipe-course-container row">
-              <div class="wprm-recipe-details-name wprm-recipe-course-name  col-sm-2">Course: </div> 
-        <div class="wprm-recipe-course col-sm-1 recipeAnswer">Soup</div>
-            </div>
-            <div class="wprm-recipe-cuisine-container row">
-              <div class="wprm-recipe-details-name wprm-recipe-cuisine-name  col-sm-2">Cuisine: </div> 
-        <div class="wprm-recipe-cuisine col-sm-1 recipeAnswer">Korean</div>
-            </div>
-            <div class="wprm-recipe-prep-time-container row">
-              <div class="wprm-recipe-details-name wprm-recipe-prep-time-name  col-sm-2">Prep Time: </div> 
-        <div class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-prep_time wprm-recipe-prep_time-minutes col-sm-1 recipeAnswer">15 minutes</div> 
-            </div>
-            <div class="wprm-recipe-cook-time-container row">
-              <div class="wprm-recipe-details-name wprm-recipe-cook-time-name col-sm-2">Cook Time: </div> 
-        <div class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-cook_time wprm-recipe-cook_time-minutes col-sm-1 recipeAnswer">15 minutes</div> 
-            </div>
-            <div class="wprm-recipe-total-time-container row">
-              <div class="wprm-recipe-details-name wprm-recipe-total-time-name  col-sm-2">Total Time: </div> 
-        <div class="wprm-recipe-details wprm-recipe-details-minutes wprm-recipe-total_time wprm-recipe-total_time-minutes col-sm-1 recipeAnswer">30 minutes</div> 
-            </div>
-            <div class="wprm-recipe-servings-container row">
-              <div class="wprm-recipe-details-name wprm-recipe-servings-name  col-sm-2">Servings: </div> 
-        <div class="wprm-recipe-details wprm-recipe-servings col-sm-1 recipeAnswer">2 to 3</div> 
-            </div>
-      </div>
-      </td>
-      <tr>
-      </table>
-          <div class="wprm-recipe-ingredients-container">
-            <h3 class="wprm-recipe-header"><img id="headerImage" src="https://techforluddites.com/images/leaf_icon.jpg">Ingredients</h3>
-            <div class="wprm-recipe-ingredient-group">
-              <h4 class="wprm-recipe-group-name wprm-recipe-ingredient-group-name ingredientCategory">Meat</h4>
-              <ul class="wprm-recipe-ingredients">
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">180</span></span> <span class="wprm-recipe-ingredient-unit">g</span> <span class="wprm-recipe-ingredient-name">skinless pork belly</span> <span class="wprm-recipe-ingredient-notes">(0.4 pounds), cut into bite size pieces</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1</span></span> <span class="wprm-recipe-ingredient-unit">Tbsp</span> <span class="wprm-recipe-ingredient-name">rice wine</span> <span class="wprm-recipe-ingredient-notes">(mirin)</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">3</span></span> <span class="wprm-recipe-ingredient-unit">sprinkles</span> <span class="wprm-recipe-ingredient-name">ground black pepper</span></li>
-              </ul>
-            </div>
-            <div class="wprm-recipe-ingredient-group">
-              <h4 class="wprm-recipe-group-name wprm-recipe-ingredient-group-name ingredientCategory">Kimchi &amp; Others</h4>
-              <ul class="wprm-recipe-ingredients">
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">3/4</span></span> <span class="wprm-recipe-ingredient-unit">cup</span> <span class="wprm-recipe-ingredient-name">aged Kimchi</span> <span class="wprm-recipe-ingredient-notes">(at least 2 to 3 weeks old), cut into bite size pieces if not already</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1/4</span></span> <span class="wprm-recipe-ingredient-name">small brown onion</span> <span class="wprm-recipe-ingredient-notes">(30 g / 1 ounce), thinly sliced</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1/2</span></span> <span class="wprm-recipe-ingredient-unit">stalk</span> <span class="wprm-recipe-ingredient-name">small green onion</span> <span class="wprm-recipe-ingredient-notes">(5 g / 0.2 ounce), thinly sliced</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">2</span></span> <span class="wprm-recipe-ingredient-name">small shiitake mushrooms</span> <span class="wprm-recipe-ingredient-notes">(50 g / 1.4 ounces), stems removed, thinly sliced</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">150</span></span> <span class="wprm-recipe-ingredient-unit">g</span> <span class="wprm-recipe-ingredient-name">firm <div class='allergen tofu'>tofu</div></span> <span class="wprm-recipe-ingredient-notes">(5.3 ounces), sliced into 1cm thickness rectangles, or other shapes you may prefer</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1</span></span> <span class="wprm-recipe-ingredient-unit">cup</span> <span class="wprm-recipe-ingredient-name">water</span></li>
-              </ul>
-            </div>
-            <div class="wprm-recipe-ingredient-group">
-              <h4 class="wprm-recipe-group-name wprm-recipe-ingredient-group-name ingredientCategory">Jjigae base (mix these in a bowl)</h4>
-              <ul class="wprm-recipe-ingredients">
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1</span></span> <span class="wprm-recipe-ingredient-unit">Tbsp</span> <span class="wprm-recipe-ingredient-name">Korean chili flakes</span> <span class="wprm-recipe-ingredient-notes">(gochugaru)</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1</span></span> <span class="wprm-recipe-ingredient-unit">Tbsp</span> <span class="wprm-recipe-ingredient-name"><div class='allergen soy_sauce'>soy sauce</div></span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1</span></span> <span class="wprm-recipe-ingredient-unit">tsp</span> <span class="wprm-recipe-ingredient-name">Korean chili paste</span> <span class="wprm-recipe-ingredient-notes">(gochujang)</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">1/4</span></span> <span class="wprm-recipe-ingredient-unit">tsp</span> <span class="wprm-recipe-ingredient-name">minced garlic</span></li>
-                <li class="wprm-recipe-ingredient"><span class="wprm-recipe-ingredient-amount"><span class="wprm-adjustable">3</span></span> <span class="wprm-recipe-ingredient-name">sprinkles ground black pepper</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="wprm-recipe-instructions-container">
-            <h3 class="wprm-recipe-header"><img id="headerImage" src="https://techforluddites.com/images/leaf_icon.jpg">Instructions</h3>
-            <div class="wprm-recipe-instruction-group">
-              <ol class="wprm-recipe-instructions">
-                <li class="wprm-recipe-instruction">
-                  <div class="wprm-recipe-instruction-text">
-                    Marinate the pork belly with the rice wine and the ground black pepper for about 15 mins.
-                  </div>
-                </li>
-                <li class="wprm-recipe-instruction">
-                  <div class="wprm-recipe-instruction-text">
-                    Cook the Kimchi in a skillet until soft. (You could do this in the pot where you will make this jjigae. Do this only if the pot is big enough to manoeuvre around.)
-                  </div>
-                </li>
-                <li class="wprm-recipe-instruction">
-                  <div class="wprm-recipe-instruction-text">
-                    Put the marinated meat into the bottom of the pot. Add all the other ingredients (Kimchi, onion, mushrooms, <div class='allergen tofu'>tofu</div> and the base sauce) except for green onion into the pot.
-                  </div>
-                </li>
-                <li class="wprm-recipe-instruction">
-                  <div class="wprm-recipe-instruction-text">
-                    Boil the pot on medium high heat initially then reduce the heat to medium once it starts boiling. Cook further until the meat is cooked. (It takes 10 to 15 mins from the beginning of step 4.) Make sure the sauce is well blended into the rest of the ingredients. (This can be done by gently mixing the sauce around the soup with a small teaspoon and splashing the soup over other ingredients every now then). When the meat is cooked, add the green onion and turn the heat off.
-                  </div>
-                </li>
-                <li class="wprm-recipe-instruction">
-                  <div class="wprm-recipe-instruction-text">
-                    Serve with rice (and other side dishes).
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="wprm-recipe-notes-container">
-            <h3 class="wprm-recipe-header"><img id="headerImage" src="https://techforluddites.com/images/leaf_icon.jpg">Recipe Notes</h3>
-            <div class="ERSSectionHead">
-        <ul>
-        <li>
-        1 Tbsp = 15 ml, 1 Cup = 250 ml
-        </li>
-        </ul>
-        <br>
-        <br>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-
-    </div>
-
-  </div>
-  </div>
-
   
-  </div> <!-- class='row' -->
-</div> <!-- class='container' -->
+  <div class='container'>
+
+
+
+    <div class='col-md-12  text-left' id='mainColumn'>
+      <h1>URL of recipe to edit:</h1>
+        <div id="allergyDashboard">
+          <form>
+              <input id="recipe-url" type="text" name="recipe-url" placeholder="enter URL here" autofocus>
+              <input id="submitInput" type="text" value="Submit"> <!--this is important for being able to press enter-->
+              <button type="button" class="btn btn-success" id="edit-recipe"><a href="index.html">Edit recipe</a></button>
+          </form>
+        </div>
+    </div>
+  </div>
 
 </body>
-
 </html>
