@@ -1,0 +1,38 @@
+/** Landing page styles **/
+
+
+.landing #submitInput{
+    display:none;
+}
+
+.landing #recipe-url, #edit-recipe{
+    height:2em;
+    font-size:1.5em;
+    padding:5px;
+}
+
+.landing #recipe-url {
+	width: 100%;
+	margin-bottom:5px;
+}
+
+.landing #newAllergy {
+}
+
+.landing #submitNewAllergy{
+    padding:5px;
+    border-radius: 10%;
+}
+
+
+.landing form {
+}
+
+.landing a {
+	color:white;
+	text-decoration: none;
+}
+
+.landing .btn-success {
+ 	margin-top:10px;
+}
