@@ -18,14 +18,14 @@
 			$('#firstColumn').append(list+replaceButton);
 			$('#azuki1').append('<ul> <div class="rep-description"><li>Source of plentiful protein</li><li>High in fiber</li></div>'
 						+'<li class="more"><div class="tooltipDiv" >more.. '
-						+'<span class="tooltiptext">Help manage diabetes'
-						+'<br>Increases antioxidant intake'
+						+'<span class="tooltiptext">Helps to manage diabetes.'
+						+'<br>Increases antioxidant intake.'
 						+'</span></div></li></ul>');
 			
 			$('#chickpea1').append('<ul><div class="rep-description"><li>Package of protein and vitamins</li><li>Keep blood sugar levels stable</li></div>'
 						+'<li class="more"><div class="tooltipDiv" >more.. '
-						+'<span class="tooltiptext">Boosts digestion'
-						+'<br>Increases feeling of fullness.</span></div></li></ul>');
+						+'<span class="tooltiptext">Aids in digestion.'
+						+'<br>Increases the feeling of fullness.</span></div></li></ul>');
 			
 			$('#header').html('Replacing: Tofu');
 			
@@ -55,14 +55,14 @@
 			$('#firstColumn').append(list+replaceButton);	
 			$('#coconut1').append('<ul> <div class="rep-description"><li>Comes from the nutrient rich sap of the coconut trees</li><li>Contains 17 amino acids</li></div>'
 				+'<li class="more"><div class="tooltipDiv" >more.. '
-				+'<span class="tooltiptext" id="d">*Reduce risk of diabetes'
-				+'<br>*Regulates cholesterol'
+				+'<span class="tooltiptext" id="d">Reduces the risk of diabetes.'
+				+'<br>Regulates cholesterol level.'
 				+'</li></ul>');
 			
 			$('#canola1').append('<ul> <div class="rep-description"><li>Low in saturate fat, high in unsaturated fat</li><li>Includes Omega-3 fatty acids</li></div>'
 				+'<li class="more"><div class="tooltipDiv" >more..'
-				+'<span class="tooltiptext">*Good for heart health'
-				+'<br>*Lowers cholesterol'
+				+'<span class="tooltiptext">Good for heart health.'
+				+'<br>Lowers cholesterol level.'
 				+'</div></li></ul>');
 			$('#header').html('Replacing: Soy sauce');
 		
