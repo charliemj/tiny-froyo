@@ -95,20 +95,20 @@ $		('.tooltiptext').click(function(e){
 			allergenClass.html(replacementName);
 			allergenClass.css('background-color', "lightgreen");
 			allergenClass.css('color', "black");
-    		setTimeout(complete1, 300);
+    		setTimeout(complete1, 100);
     		function complete1() {
     			allergenClass.css('background-color', "white");
 				allergenClass.css('color', "green");
-    			setTimeout(complete2, 300);
+    			setTimeout(complete2, 100);
     		}
     		function complete2() {
     			allergenClass.css('background-color', "lightgreen");
 				allergenClass.css('color', "black");
-    			setTimeout(complete3, 300);
+    			setTimeout(complete3, 100);
     		}
     		function complete3() {
-    			allergenClass.css('background-color', "lightgreen");
-				allergenClass.css('color', "black");
+    			allergenClass.css('background-color', "white");
+				allergenClass.css('color', "green");
     		}	
     		// remove "selected" from all replacements
     		$(".rep-title").each( function() {
