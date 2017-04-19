@@ -16,14 +16,14 @@
 			$('#firstColumn').append(list+replaceButton);
 			$('#azuki1').append('<ul> <div class="rep-description"><li>Source of plentiful protein</li><li>High in fiber</li></div>'
 						+'<li class="more"><div class="tooltipDiv" >more.. '
-						+'<span class="tooltiptext">*Help mange diabetes'
-						+'<br>*Increases antioxidant intake'
+						+'<span class="tooltiptext">Help manage diabetes'
+						+'<br>Increases antioxidant intake'
 						+'</span></div></li></ul>');
 			
 			$('#chickpea1').append('<ul><div class="rep-description"><li>Package of protein and vitamins</li><li>Keep blood sugar levels stable</li></div>'
 						+'<li class="more"><div class="tooltipDiv" >more.. '
-						+'<span class="tooltiptext">*Boosts digestion'
-						+'<br>*Increases satiety.</span></div></li></ul>');
+						+'<span class="tooltiptext">Boosts digestion'
+						+'<br>Increases feeling of fullness.</span></div></li></ul>');
 			
 			$('#header').html('Replacing: Tofu');
 			
@@ -92,7 +92,14 @@ $		('.tooltiptext').click(function(e){
     		function complete3() {
     			allergenClass.css('background-color', "lightgreen");
 				allergenClass.css('color', "black");
-    		}			
+    		}	
+    		// remove "selected" from all replacements
+    		$(".rep-title").each( function() {
+    			$(this).removeClass("selected");
+    		});
+
+    		// add class "selected"	to this replacement
+    		$(this).find(".rep-title").addClass("selected");		
 	  });
 	}
 	
@@ -105,6 +112,12 @@ $		('.tooltiptext').click(function(e){
 	}
 	
 	function resetChosenReplacement(){
+
+		// remove "selected" from all replacements
+		$(".rep-title").each( function() {
+    			$(this).removeClass("selected");
+    		});
+
 		var allergenToReset;
 		if(currentAllergen == "tofu"){
 			allergenToReset = $('.tofu');
