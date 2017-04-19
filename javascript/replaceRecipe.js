@@ -16,16 +16,16 @@
 			var replaceButton = '<div id="buttonSpace"><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for tofu</button></div>';
 	
 			$('#firstColumn').append(list+replaceButton);
-			$('#azuki1').append('<ul> <div class="rep-description"><li>Source of plentiful protein</li><li>High in fiber</li></div>'
+			$('#azuki1').append('<ul> <div class="rep-description"><li>source of plentiful protein</li><li>high in fiber</li></div>'
 						+'<li class="more"><div class="tooltipDiv" >more.. '
-						+'<span class="tooltiptext">Helps to manage diabetes.'
-						+'<br>Increases antioxidant intake.'
+						+'<span class="tooltiptext">helps to manage diabetes'
+						+'<br>increases antioxidant intake'
 						+'</span></div></li></ul>');
 			
-			$('#chickpea1').append('<ul><div class="rep-description"><li>Package of protein and vitamins</li><li>Keep blood sugar levels stable</li></div>'
+			$('#chickpea1').append('<ul><div class="rep-description"><li>package of protein and vitamins</li><li>keeps blood sugar levels stable</li></div>'
 						+'<li class="more"><div class="tooltipDiv" >more.. '
-						+'<span class="tooltiptext">Aids in digestion.'
-						+'<br>Increases the feeling of fullness.</span></div></li></ul>');
+						+'<span class="tooltiptext">aids in digestion'
+						+'<br>increases the feeling of fullness</span></div></li></ul>');
 			
 			$('#header').html('Replacing: Tofu');
 			
@@ -53,16 +53,16 @@
 			var list = '<div id="replacementList"><ul><li class="replacement" id="coconut1"><div class="rep-title">coconut aminos</div></li><li class="replacement" id="canola1"><div class="rep-title">canola oil</div></li></ul></div>';
 			var replaceButton = '<div id="buttonSpace"><br><button id="resetButton" type="button" class="btn btn-success btn-lg" onclick="resetChosenReplacement()" style="">Reset replacements for soy sauce</button></div>';
 			$('#firstColumn').append(list+replaceButton);	
-			$('#coconut1').append('<ul> <div class="rep-description"><li>Comes from the nutrient rich sap of the coconut trees</li><li>Contains 17 amino acids</li></div>'
+			$('#coconut1').append('<ul> <div class="rep-description"><li>comes from the nutrient rich sap of the coconut trees</li><li>contains 17 amino acids</li></div>'
 				+'<li class="more"><div class="tooltipDiv" >more.. '
-				+'<span class="tooltiptext" id="d">Reduces the risk of diabetes.'
-				+'<br>Regulates cholesterol level.'
+				+'<span class="tooltiptext" id="d">reduces the risk of diabetes'
+				+'<br>regulates cholesterol level'
 				+'</li></ul>');
 			
-			$('#canola1').append('<ul> <div class="rep-description"><li>Low in saturate fat, high in unsaturated fat</li><li>Includes Omega-3 fatty acids</li></div>'
+			$('#canola1').append('<ul> <div class="rep-description"><li>low in saturate fat, high in unsaturated fat</li><li>contains Omega-3 fatty acids</li></div>'
 				+'<li class="more"><div class="tooltipDiv" >more..'
-				+'<span class="tooltiptext">Good for heart health.'
-				+'<br>Lowers cholesterol level.'
+				+'<span class="tooltiptext">good for heart health'
+				+'<br>lowers cholesterol level'
 				+'</div></li></ul>');
 			$('#header').html('Replacing: Soy sauce');
 		
