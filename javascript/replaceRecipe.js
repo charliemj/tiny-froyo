@@ -75,7 +75,7 @@ $		('.tooltiptext').click(function(e){
 	  $('.replacement').on('click', function() {
 			var replacementName = this.innerHTML.split('<ul>')[0];
 			var allergenClass = $('.'+allergen.className.split(" ")[1]);
-			allergenClass.html(replacementName);	
+			allergenClass.html(replacementName);
 			allergenClass.css('background-color', "lightgreen");
 			allergenClass.css('color', "black");
     		setTimeout(complete1, 300);
@@ -104,13 +104,29 @@ $		('.tooltiptext').click(function(e){
 	}
 	
 	function printRecipe(){
+		var x = $('.tofu')[0];
+		var y = $('.soy_sauce')[0];
+		if (x.innerHTML==='tofu' || y.innerHTML==='soy sauce'){
+			alert("You haven't replaced all allergens yet!");
+			/*  
+			// The confirm dialog only has 'ok' and 'cancel' buttons - the 'ok' button might be confusing.
+			if (confirm("You haven't replaced all allergens. Are you sure you would like to print?")){
+				actuallyPrint();
+			} 
+			*/
+		} else {
+			actuallyPrint();
+        }	
+	}
+
+	function actuallyPrint(){
 		var recipeCSS = new String ('<link href="https://kar-moore.github.io/tiny-froyo/stylesheets/styles-master.css" rel="stylesheet" type="text/css" >');
 		var mainCSS = new String('<link href="https://kar-moore.github.io/tiny-froyo/stylesheets/recipe_style.css" rel="stylesheet" type="text/css" >');
 		window.frames["print_frame"].document.body.innerHTML= recipeCSS + mainCSS + document.getElementById('mainColumnExceptPrintButton').innerHTML;
         window.frames["print_frame"].window.focus();
-        window.frames["print_frame"].window.print();	
+        window.frames["print_frame"].window.print();
 	}
-	
+
 	function resetChosenReplacement(){
 
 		// remove "selected" from all replacements
