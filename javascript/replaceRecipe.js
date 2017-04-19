@@ -1,5 +1,7 @@
 
 	  var currentAllergen;
+	  var tofuSelected = null; // THIS IS A STUPID BANDAID SOLUTION
+	  var soySelected = null;
 	
 	  //when user clicks on tofu 
 	  $(document).ready(function(){
@@ -31,6 +33,13 @@
 			addTooltipListener();
 			currentAllergen = "tofu";
 
+			if (tofuSelected != null) {
+				console.log(".rep-title:contains('"+tofuSelected+"'')");
+				var selectdiv = $(".rep-title:contains('"+tofuSelected+"')");
+				console.log("div" + selectdiv);
+				$(selectdiv).addClass("selected");
+			}
+
 		});
 
 		
@@ -60,6 +69,14 @@
 			addReplacementListener(this);
 			addTooltipListener();
 			currentAllergen = "soy sauce";
+
+
+			if (soySelected != null) {
+				console.log(".rep-title:contains('"+soySelected+"'')");
+				var selectdiv = $(".rep-title:contains('"+soySelected+"')");
+				console.log("div" + selectdiv);
+				$(selectdiv).addClass("selected");
+			}
 			
 		});
 	   });
@@ -99,7 +116,16 @@ $		('.tooltiptext').click(function(e){
     		});
 
     		// add class "selected"	to this replacement
-    		$(this).find(".rep-title").addClass("selected");		
+    		$(this).find(".rep-title").addClass("selected");
+
+			if ($("#header:contains('Tofu')").length > 0 ) {
+    			tofuSelected = $(this).find(".rep-title").text();	
+    		}	
+    		else {
+    			soySelected = $(this).find(".rep-title").text();
+    		}
+    		console.log("tofu select" + tofuSelected);
+    		console.log("soy select" + soySelected);
 	  });
 	}
 	
@@ -138,9 +164,11 @@ $		('.tooltiptext').click(function(e){
 		if(currentAllergen == "tofu"){
 			allergenToReset = $('.tofu');
 			allergenToReset.html('tofu');
+			tofuSelected = null;
 		}else if(currentAllergen == "soy sauce"){
 			allergenToReset = $('.soy_sauce');
 			allergenToReset.html('soy sauce');
+			soySelected = null;
 		}
 		allergenToReset.css('background-color', "#ed6363");
 		allergenToReset.css("color", "white");
