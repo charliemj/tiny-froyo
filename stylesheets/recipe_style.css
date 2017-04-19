@@ -173,7 +173,7 @@ width: 100%;
 .tooltipDiv .tooltiptext {
     visibility: hidden;
     width: 220px;
-    background-color: #c5e0ba;
+    background-color: #c5f7ba;
     color: #000;
     text-align: left;
     border-radius: 8px;
@@ -196,7 +196,7 @@ width: 100%;
     margin-left: -20px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #88c96c transparent;
+    border-color: transparent transparent #c5f7ba transparent;
 }
 
 
