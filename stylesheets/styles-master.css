@@ -20,6 +20,11 @@ html, body{
 }
 
 /** Universal styles **/
+
+#accountButton{
+	font-size:20px;
+}
+
 .navbar-default .navbar-brand {
 	font-size: 3.7em;
 	font-weight: bold;
