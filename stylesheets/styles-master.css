@@ -21,7 +21,7 @@ html, body{
 
 /** Universal styles **/
 
-#accountButton{
+.accountButton{
 	font-size:20px;
 }
 
