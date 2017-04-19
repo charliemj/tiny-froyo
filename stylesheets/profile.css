@@ -1,5 +1,10 @@
 /** Profile page styles **/
 
+
+#accountButton{
+	font-size:20px;
+}
+
 .profile #firstColumn {
 	margin-top:25px;
 	border-right:1px solid #ddd;
@@ -20,7 +25,7 @@
 .profile .deleteButton, .allergyName{
     margin:10px;
     display:inline-block;
-}
+} 
 
 .profile label {
 	font-weight: 300;
